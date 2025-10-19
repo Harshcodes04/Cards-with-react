@@ -108,8 +108,9 @@ const App = () => {
 
   return (
     <div className="parent">
-      {jobOpenings.map(function (elem) {
+      {jobOpenings.map(function (elem,idx) {
         return (
+          <div key={idx}>
           <Card
             company={elem.companyName}
             post={elem.post}
@@ -120,6 +121,7 @@ const App = () => {
             location={elem.location}
             date={elem.datePosted}
           />
+          </div>
         );
       })}
     </div>
